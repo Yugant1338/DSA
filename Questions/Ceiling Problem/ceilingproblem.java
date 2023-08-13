@@ -12,6 +12,6 @@ static int binarysearch(int[] arr,int start,int end,int key){
             }
         }
         else{
-            return arr[start];
+            return start;
         }
 }
