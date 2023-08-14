@@ -5,7 +5,7 @@
                return mid;
            }
            else if(arr[mid]>key){
-               return binarysearch(arr,start,mid,key);
+               return binarysearch(arr,start,mid-1,key);
            }
            else{
                return binarysearch(arr,mid+1,end,key);
