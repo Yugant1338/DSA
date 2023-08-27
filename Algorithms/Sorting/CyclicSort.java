@@ -27,7 +27,7 @@ static int[] cyclicsort(int[] arr){
             This is done till we get the correct number on the i th index that is i, 
             Once the i+1 number is achieved i is incremented and checked for the i+1 element
           */
-            if(arr[i]!=i){
+            if(arr[arr[i]!=i){
                 swap(arr,i,arr[i]);
             }
             else{
