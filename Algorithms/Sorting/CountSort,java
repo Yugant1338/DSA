@@ -1,0 +1,24 @@
+int[] arr =  {4,4,2,1,1,5,3,1,4,1,0};
+        int max =  findmax(arr);
+        int[] frq = new int[max+1];
+        for(int i=0;i<arr.length;i++){
+            frq[arr[i]]++;
+        }
+        for(int i=1;i<frq.length;i++){
+            frq[i] = frq[i] + frq[i-1];
+        }
+        int[] newarr = new int[arr.length];
+        for(int i = arr.length-1;i>-1;i--){
+            newarr[frq[arr[i]]-1] = arr[i];
+            frq[arr[i]]--;
+        }
+        System.out.println(Arrays.toString(newarr));
+    }
+    static int findmax(int[] arr){
+        int max = arr[0];
+        for(int i=1;i<arr.length;i++){
+            if(arr[i]>max){
+                max = arr[i];
+            }
+        }
+        return max;
